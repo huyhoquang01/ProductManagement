@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>WebSocket Test</title>
+    <script language="javascript" type="text/javascript">
+            websocket = new WebSocket('ws://127.0.0.1:2046/');
+            websocket.onopen = function (evt) {
+                console.log('connect');
+                websocket.send('{"data":"Hello, world!"}');
+            };
+            websocket.onclose = function (evt) {
+                console.log('onclose');
+                console.log(evt);
+            };
+            websocket.onmessage = function (evt) {
+                console.log('onmessage');
+                if (evt.data) {
+                    console.log(JSON.parse(JSON.parse(evt.data)));
+                }
+            };
+            websocket.onerror = function (evt) {
+                console.log('onerror');
+                console.log(evt);
+            };
+            function sendMsg() {
+                var sendData = { 'data': document.getElementById('name').value };
+                // $.ajax({
+                //     type: "POST",  //type of method
+                //     url: "http://127.0.0.1:8080/manager/views/fcm_call.php",
+                //     data: { title: 'New Mesage', body: document.getElementById("name").value },
+                //     success: function (res) {
+                //         //do what you want here...
+                //         console.log(res);
+                //     }
+                // });
+                // console.log(data);
+                sendRequest();
+                websocket.send(JSON.stringify(sendData));
+            }
+
+            const sendRequest = () => {
+                let data = { 'title': 'New message', 'body': document.getElementById("name").value };
+
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', "http://127.0.0.1:8080/manager/views/fcm_call.php");
+                xhr.setRequestHeader("Content-type", "application/json")
+                xhr.onload = function () {
+                    console.log(this.response);
+                };
+                xhr.send(JSON.stringify(data));
+                return false;
+            }
+        </script>
+</head>
+
+<body>
+    <h2>WebSocket Test</h2>
+    <input type="text" name="name" id="name" />
+    <a href="javascript:;" onclick="sendMsg()">Click to send</a>
+</body>
+
+</html>

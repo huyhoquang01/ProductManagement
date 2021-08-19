@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/search_edittext">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:backgroundTint="@color/dark_turquoise"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:background="@drawable/search_edittext">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="14dp"
+            app:cardCornerRadius="70dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/wojak" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/GoodMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huy Hảo Hán"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:elevation="10dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/search_edittext"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/dim_gray"
+                android:text="Photos"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#24B19E"
+                android:text="160"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/dim_gray"
+                android:text="Followers"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#24B19E"
+                android:text="9999"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/dim_gray"
+                android:text="Following"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#24B19E"
+                android:text="999"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="50dp"
+        android:background="@drawable/search_edittext">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/dark_slate_gray"
+            android:text="+84 9099098"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="8dp"
+            app:drawableStartCompat="@drawable/phone_android" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/dark_slate_gray"
+            android:layout_marginBottom="20dp"
+            android:text="huywoaytai@gmail.com"
+            android:drawablePadding="8dp"
+            app:drawableStartCompat="@drawable/mail_colored" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/dark_slate_gray"
+            app:drawableStartCompat="@drawable/lock_open_colored"
+            android:text="Change password"/>
+        <TextView
+            android:id="@+id/tvChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="50dp"
+            android:textColor="@color/dark_slate_gray"
+            app:drawableStartCompat="@drawable/heart"
+            android:text="Chat with Cute Admin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:drawablePadding="8dp"
+            android:textColor="#ff0000"
+            android:text="Log out"
+            app:drawableStartCompat="@drawable/exit_colored" />
+    </LinearLayout>
+</LinearLayout>

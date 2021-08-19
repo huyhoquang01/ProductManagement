@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "592649540850",
+    "project_id": "aidnetworking-e8a91",
+    "storage_bucket": "aidnetworking-e8a91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592649540850:android:edcaa473ccc816a67c2c6b",
+        "android_client_info": {
+          "package_name": "com.example.aidnetworking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592649540850-3lgbvt22vmm5t3ei521c3v6kr2dr5hmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYY_alWOB6OikmS7FXY37ckrKvHKcA74k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592649540850-3lgbvt22vmm5t3ei521c3v6kr2dr5hmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_turquoise"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Labs.Lab7Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:elevation="14dp"
+            app:cardCornerRadius="70dp">
+
+            <ImageView
+                android:id="@+id/ivAvatarTrump"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donald Trump"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/search_edittext"
+        android:padding="16dp"
+        app:stackFromEnd="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pale_turquoise"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etMessage"
+            style="@style/EditTextSearch"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:hint="Type message..."
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/ivSend"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/search_edittext"
+            android:src="@drawable/send" />
+    </LinearLayout>
+</LinearLayout>
